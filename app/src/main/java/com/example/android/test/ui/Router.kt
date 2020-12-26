@@ -3,6 +3,7 @@ package com.example.android.test.ui
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.android.test.R
+import com.example.android.test.ui.fragments.items.ItemsFragment
 
 object Router {
 
@@ -24,5 +25,9 @@ object Router {
                 addToBackStack(null)
             commitAllowingStateLoss()
         }
+    }
+
+    fun showItems(fm: FragmentManager) {
+        showFragment(ItemsFragment.newInstance(), fm, addToBackStack = false)
     }
 }
