@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Router.showItems(supportFragmentManager)
+        if (savedInstanceState == null)
+            Router.showItems(supportFragmentManager)
     }
 }
